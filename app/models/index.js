@@ -29,10 +29,10 @@ db.units = require("../models/unit.model")(sequelize, DataTypes);
 db.productUnit = require("../models/productUnit.model")(sequelize, DataTypes);
 db.user = require("../models/user.model")(sequelize, DataTypes);
 db.role = require("../models/role.model")(sequelize, DataTypes);
-// db.sequelize.sync({ alter: true }).then(() => {
-//   console.log("yes re-sync done!");
-//   // initial();
-// });
+db.sequelize.sync({ alter: true }).then(() => {
+  console.log("yes re-sync done!");
+  // initial();
+});
 //o-t-m
 db.categories.hasMany(db.products, {
   foreignKey: "categoryId",
