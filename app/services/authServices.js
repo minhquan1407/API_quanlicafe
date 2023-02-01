@@ -166,7 +166,7 @@ const signOut = async (req, res) => {
   try {
     req.session = null;
     return res.status(200).json({
-      message: "You've been signed out!",
+      message: "You've been signed eqweqweqweqwqwe!qqqqq",
     });
   } catch (err) {
     this.next(err);
